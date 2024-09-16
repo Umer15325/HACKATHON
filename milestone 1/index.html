@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="resume-container">
+
+<!-- left section of page -->
+        <div class="left-section">
+
+            <!-- profile picture -->
+            <img src="pic.png" alt="profile picture" class="pfp">
+
+            <!-- name -->
+            <h2 id="name">Muhammad Umer</h2>
+
+            <!-- profession -->
+            <section id="profession">
+                <p><b>Profession:</b> Web Developer</p>
+            </section>
+
+            <!-- contact information -->
+            <button onclick="contFunction()" id="cont"> Contact </button>
+
+            <section id="contact">
+                <p><b>City</b></p>
+                <p>Karachi</p>
+
+                <p><b>Phone</b></p>
+                <p>0315-2032020</p>
+
+                <p><b>Email</b></p>
+                <p><a href="mailto:umer15325@gmail.com">umer15325@gmail.com</a></p>
+            </section>
+
+        </div>
+
+<!-- right section of the page -->
+            <div class="right-section">
+
+                <!-- education -->
+                <button onclick="eduFunc()" id="edu" class="css"> Education </button>
+                <section id="education">
+                    <ul>
+                        <li>Intermediate: Adamjee Govt. Science College (ongoing)</li>
+                        <li>Matriculation: Akbar Public School</li>
+                    </ul>
+                </section> <br>
+
+                <!-- skills -->
+                <button onclick="skillFunc()" id="skill" class="css"> Skills </button>
+                <section id="skills">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Typescript</li>
+                        <li>Next.js</li>
+                        <li>MS-Office</li>
+                    </ul>
+                </section> <br>
+
+                <!-- work experience -->
+                <button onclick="expFunc()" id="exp" class="css"> Work Experience </button>
+                <section id="experience">
+                    <ul>
+                        <li>Seeking an opportunity as a fresh candidate to start my professional career</li>
+                    </ul>
+                </section>
+            </div>
+
+        </div>
+
+<script src="script.js"></script>
+
+</body>
+</html
