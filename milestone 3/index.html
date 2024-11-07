@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Form to input data -->
+    <div id="form-div">
+        <h1 id="form-heading">Enter Your Details</h1>
+        <form id="resumeForm" onsubmit="updateResume(event)">
+            <label for="name" class="label">Name:</label> <br>
+            <input type="text" id="formName" placeholder="E.g., Muhammad Umer" class="input" required><br>
+
+            <label for="profession" class="label">Profession:</label> <br>
+            <input type="text" id="formProfession" placeholder="E.g., Web Developer" class="input" required><br>
+
+            <label for="city" class="label">City:</label> <br>
+            <input type="text" id="formCity" placeholder="E.g., Karachi" class="input" required><br>
+
+            <label for="phone" class="label">Phone:</label> <br>
+            <input type="tel" id="formPhone" placeholder="E.g., 0315-2032020" class="input" required><br>
+
+            <label for="email" class="label">Email:</label> <br>
+            <input type="email" id="formEmail" placeholder="E.g., umer15325@gmail.com" class="input" required><br>
+
+            <label for="education" class="label">Education (comma-separated):</label> <br>
+            <input type="text" id="formEducation" placeholder="E.g., BSCS: NED University, Intermediate: Adamjee Govt. Science College" class="input" required><br>
+
+            <label for="skills" class="label">Skills (comma-separated):</label> <br>
+            <input type="text" id="formSkills" placeholder="E.g., HTML, CSS" class="input" required><br>
+
+            <label for="experience" class="label">Work Experience (comma-separated):</label> <br>
+            <input type="text" id="formExperience" placeholder="E.g., Junior Developer: ABC Tech (2022), Frontend Developer: XYZ Company" class="input" required><br>
+
+            <label for="profilePic" class="label">Profile Picture:</label> <br>
+            <input type="file" id="formProfilePic" accept="image/*" onchange="previewProfilePic(event)" class="input"><br> <br> <br>
+
+            <button type="submit" class="label nolabel" id="Generate">Generate Resume</button>
+        </form>
+    </div>
+
+
+    <br><br><br><br><br><br>
+
+
+<!-- Resume -->
+    <div id="resume-container">
+
+<!-- left section of page -->
+        <div class="left-section">
+
+            <!-- profile picture -->
+            <img src="pic.png" alt="profile picture" class="pfp" id="profilePicture">
+
+            <!-- name -->
+            <h2 id="name">Muhammad Umer</h2>
+
+            <!-- profession -->
+            <section id="profession">
+                <p><b>Profession: <br><br> </b> <span id="userProfession"> Web Developer </span></p>
+            </section>
+
+            <!-- contact information -->
+            <button onclick="contFunction()" id="cont"> Contact </button>
+
+            <section id="contact">
+                <p><b>City</b></p>
+                <p><span id="userCity">Karachi</span></p>
+
+                <p><b>Phone</b></p>
+                <p><span id="userPhone">0315-2032020</span></p>
+
+                <p><b>Email</b></p>
+                <p><span id="userEmail">umer15325@gmail.com</span></p>
+            </section>
+
+        </div>
+
+<!-- right section of the page -->
+            <div class="right-section">
+
+                <!-- education -->
+                <button onclick="eduFunc()" id="edu" class="css"> Education </button>
+                <section id="education">
+                    <ul id="educationList">
+                        <li>Intermediate: Adamjee Govt. Science College (ongoing)</li>
+                        <li>Matriculation: Akbar Public School</li>
+                    </ul>
+                </section> <br>
+
+                <!-- skills -->
+                <button onclick="skillFunc()" id="skill" class="css"> Skills </button>
+                <section id="skills">
+                    <ul id="skillsList">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Typescript</li>
+                        <li>Next.js</li>
+                        <li>MS-Office</li>
+                    </ul>
+                </section> <br>
+
+                <!-- work experience -->
+                <button onclick="expFunc()" id="exp" class="css"> Work Experience </button>
+                <section id="experience">
+                    <ul id="experienceList">
+                        <li>BSCS: NED University</li>
+                        <li>Intermediate: Adamjee Govt. Science College</li>
+                        <li>Matriculation: Akbar Public School</li>
+                    </ul>
+                </section>
+            </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html
